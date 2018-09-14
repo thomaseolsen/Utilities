@@ -1,5 +1,10 @@
 #include <iostream>
 #include "../include/md5.h"
+#include "../include/sha1.h"
+#include "../include/sha224.h"
+#include "../include/sha256.h"
+#include "../include/sha384.h"
+#include "../include/sha512.h"
 #include "../include/strings.h"
 
 enum string_algorithm {
@@ -28,6 +33,16 @@ std::string getHash(std::string alg, std::string input)
     {
         case MD5:
             return md5(input);
+        case SHA1:
+            return sha1(input);
+        case SHA224:
+            return sha224(input);
+        case SHA256:
+            return sha256(input);
+        case SHA384:
+            return sha384(input);
+        case SHA512:
+            return sha512(input);
         default:
             return "algorithm is not yet implemented.";
     }

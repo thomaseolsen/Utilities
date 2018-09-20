@@ -10,6 +10,7 @@ class SHA256 {
     
         const static uint32 sha256_k[];
         static const unsigned int SHA224_256_BLOCK_SIZE = (512/8);
+        
     public:
         void init();
         void update(const unsigned char *message, unsigned int len);
